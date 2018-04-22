@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class WaterWheel : MonoBehaviour {
 
-    public float rotationSpeed = 42f;
-    public bool isRotating = false;
+    public const int NUM_SEGMENTS = 16;
 
-	// Use this for initialization
-	void Start ()
+    public float beatsPerMinute = 60;
+
+    float revolutionsPerMinute;
+    float degreesPerMinute;
+    float degreesPerSecond;
+
+    bool isRotating;
+
+    // Use this for initialization
+    void Start ()
     {
-
+        revolutionsPerMinute = beatsPerMinute / NUM_SEGMENTS;
+        degreesPerMinute = revolutionsPerMinute * 360;
+        degreesPerSecond = degreesPerMinute / 60f;
+        isRotating = false;
     }
 
     // Update is called once per frame
@@ -21,7 +31,7 @@ public class WaterWheel : MonoBehaviour {
         }
         if (isRotating)
         {
-            transform.Rotate(Vector3.back * Time.deltaTime * rotationSpeed, Space.Self);
+            transform.Rotate(Vector3.back * degreesPerSecond * Time.deltaTime, Space.Self);
         }
     }
 }
