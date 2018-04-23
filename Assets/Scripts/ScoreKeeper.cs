@@ -8,9 +8,9 @@ public class ScoreKeeper : MonoBehaviour {
     // singleton pattern
     public static ScoreKeeper instance;
 
-    public Text scoreText;
+    public Text streakText;
+    public Text maxStreakText;
 
-    public int totalPoints;
     public int currStreak;
     public int maxStreak;
 
@@ -19,7 +19,8 @@ public class ScoreKeeper : MonoBehaviour {
         if(instance == null)
         {
             instance = this;
-            UpdateScoreText();
+            UpdateStreakText();
+            UpdateMaxStreakText();
         }
         else
         {
@@ -28,25 +29,30 @@ public class ScoreKeeper : MonoBehaviour {
         }
     }
 
-    public void IncreaseStreakAndPoints(int points)
+    public void IncreaseStreak()
     {
-        totalPoints += points;
         currStreak++;
         if(currStreak > maxStreak)
         {
             maxStreak = currStreak;
+            UpdateMaxStreakText();
         }
-        UpdateScoreText();
+        UpdateStreakText();
     }
 
     public void EndStreak()
     {
         currStreak = 0;
-        UpdateScoreText();
+        UpdateStreakText();
     }
 
-    public void UpdateScoreText()
+    public void UpdateStreakText()
     {
-        scoreText.text = string.Format("Score: {0}\n\nMax Streak: {1}\n\nStreak: {2}", totalPoints, maxStreak, currStreak);
+        streakText.text = currStreak.ToString();
+    }
+
+    public void UpdateMaxStreakText()
+    {
+        maxStreakText.text = string.Format("Max Streak: {0}", maxStreak);
     }
 }
