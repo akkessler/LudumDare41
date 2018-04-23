@@ -40,10 +40,10 @@ public class Target : MonoBehaviour {
 
     public void TakeDamage()
     {
-        if(inTargetZone)
+        if(inTargetZone && !wasShotInTargetZone)
         {
             wasShotInTargetZone = true;
-            ScoreKeeper.instance.IncreaseStreakAndPoints(1);
+            ScoreKeeper.instance.IncreaseStreak();
         }
         else
         {
