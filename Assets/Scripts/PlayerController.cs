@@ -14,14 +14,15 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponents<AudioSource>()[1];
+        //audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetMouseButtonDown(0))
         {
-            audioSource.PlayOneShot(gunshotSound);
+            audioSource.PlayOneShot(gunshotSound, 0.2f);
 
             Vector3 rayOrigin = Camera.main.ViewportToWorldPoint(new Vector3(.5f, .5f, 0));
             RaycastHit hit;
