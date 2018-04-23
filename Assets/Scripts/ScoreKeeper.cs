@@ -12,6 +12,7 @@ public class ScoreKeeper : MonoBehaviour {
 
     public int totalPoints;
     public int currStreak;
+    public int maxStreak;
 
 	// Use this for initialization
 	void Start () {
@@ -26,16 +27,15 @@ public class ScoreKeeper : MonoBehaviour {
             Debug.Log("Already have a ScoreKeeper instance!");
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void IncreaseStreakAndPoints(int points)
     {
         totalPoints += points;
         currStreak++;
+        if(currStreak > maxStreak)
+        {
+            maxStreak = currStreak;
+        }
         UpdateScoreText();
     }
 
@@ -47,6 +47,6 @@ public class ScoreKeeper : MonoBehaviour {
 
     public void UpdateScoreText()
     {
-        scoreText.text = string.Format("Score: {0}\n\nStreak: {1}", totalPoints, currStreak);
+        scoreText.text = string.Format("Score: {0}\n\nMax Streak: {1}\n\nStreak: {2}", totalPoints, maxStreak, currStreak);
     }
 }
