@@ -6,13 +6,17 @@ public class WaterWheel : MonoBehaviour {
 
     public const int NUM_SEGMENTS = 16;
 
-    public float beatsPerMinute = 60;
+    public float beatsPerMinute;
 
     float revolutionsPerMinute;
     float degreesPerMinute;
     float degreesPerSecond;
 
-    bool isRotating;
+    public bool isRotating
+    {
+        get;
+        private set;
+    }
 
     // Use this for initialization
     void Start ()
@@ -25,13 +29,24 @@ public class WaterWheel : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            isRotating = !isRotating;
-        }
         if (isRotating)
         {
             transform.Rotate(Vector3.back * degreesPerSecond * Time.deltaTime, Space.Self);
         }
+    }
+
+    public void StartRotate()
+    {
+        isRotating = true;
+    }
+
+    public void StopRotate()
+    {
+        isRotating = false;
+    }
+
+    public void SetBeatsPerMinute(int beatsPerMinute)
+    {
+        this.beatsPerMinute = beatsPerMinute;
     }
 }
