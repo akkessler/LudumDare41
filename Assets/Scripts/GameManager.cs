@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 		if(Input.GetKeyUp(KeyCode.Alpha1) && !audioSource.isPlaying)
         {
             waterWheel.StartRotate();
-            audioSource.PlayOneShot(song);
+            audioSource.Play(0);
         }
 	}
 }
