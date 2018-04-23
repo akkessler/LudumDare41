@@ -18,11 +18,6 @@ public class Target : MonoBehaviour {
     void Start () {
         meshRenderer.material.color = Color.red;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void ResetState()
     {
