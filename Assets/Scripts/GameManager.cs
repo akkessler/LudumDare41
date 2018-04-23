@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour {
     AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
-        waterWheel.SetBeatsPerMinute(bpm);
         audioSource = GetComponent<AudioSource>();
+
+        waterWheel.SetBeatsPerMinute(bpm);
+        waterWheel.SetAudioSource(audioSource);
     }
 
     // Update is called once per frame

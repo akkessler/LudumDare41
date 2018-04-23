@@ -11,6 +11,8 @@ public class WaterWheel : MonoBehaviour {
     float revolutionsPerMinute;
     float degreesPerMinute;
     float degreesPerSecond;
+    AudioSource audioSource;
+    float prevSongTime;
 
     public bool isRotating
     {
@@ -31,13 +33,18 @@ public class WaterWheel : MonoBehaviour {
     void Update() {
         if (isRotating)
         {
-            transform.Rotate(Vector3.back * degreesPerSecond * Time.deltaTime, Space.Self);
+            float currSongTime = audioSource.time;
+            float deltaSongTime = currSongTime - prevSongTime;
+            prevSongTime = currSongTime;
+
+            transform.Rotate(Vector3.back * degreesPerSecond * deltaSongTime, Space.Self);
         }
     }
 
     public void StartRotate()
     {
         isRotating = true;
+        prevSongTime = audioSource.time;
     }
 
     public void StopRotate()
@@ -48,5 +55,10 @@ public class WaterWheel : MonoBehaviour {
     public void SetBeatsPerMinute(int beatsPerMinute)
     {
         this.beatsPerMinute = beatsPerMinute;
+    }
+
+    public void SetAudioSource(AudioSource audioSource)
+    {
+        this.audioSource = audioSource;
     }
 }
