@@ -10,7 +10,7 @@ Rhythm FPS with a Western/Cowboy setting. Shoot targets in sync with the music a
 
 This is a **Rhythm-FPS** game where you must shoot the targets on the water wheel to the beat of the song. 
 
-_See how many you can get in a row and share your best streaks below!_
+*Full screen strongly recommended*
 
 # Controls
 
@@ -24,6 +24,6 @@ Press `1` to start the game.
 
 # Thanks
 
-*Full screen strongly recommended*
-
 Thanks for playing my second Ludum Dare game! This time I limited my scope and am happy with the result! I look forward to hearing your feedback.
+
+Huge shout-out to **Sweet_Niche** who let me use his awesome looping sound track!
