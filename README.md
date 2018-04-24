@@ -6,6 +6,8 @@ Theme: Combine 2 Incompatible Genres
 
 Rhythm FPS with a Western/Cowboy setting. Shoot targets in sync with the music as they rotate on a water wheel.
 
+![Banner](https://github.com/akkessler/LudumDare41/blob/master/screenshot.png)
+
 # About
 
 This is a **Rhythm-FPS** game where you must shoot the targets on the water wheel to the beat of the song. 
