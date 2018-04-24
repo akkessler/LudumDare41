@@ -1,4 +1,4 @@
-# LudumDare41
+# Shoot Shoot Revolution (LudumDare41)
 
 Theme: Combine 2 Incompatible Genres
 
