@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         audioSource = GetComponents<AudioSource>()[1];
-        //audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -34,7 +33,6 @@ public class PlayerController : MonoBehaviour {
                 Target t = hit.transform.GetComponent<Target>();
                 if (t != null)
                 {
-                    Vector3 pos = t.transform.position + (-t.transform.forward * .05f);
                     bulletHole = Instantiate(bulletHolePrefab, hit.point + (hit.normal * .005f), Quaternion.FromToRotation(Vector3.up, hit.normal));
                     bulletHole.transform.parent = hit.transform.parent; // parent for scales to work on water wheel?
                     t.SendMessage("TakeDamage");
