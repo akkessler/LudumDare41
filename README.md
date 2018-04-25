@@ -1,4 +1,4 @@
-# Shoot Shoot Revolution (LudumDare41)
+# Bang Bang Revolution (LudumDare41)
 
 Theme: Combine 2 Incompatible Genres
 
@@ -29,3 +29,5 @@ Press `1` to start the game.
 Thanks for playing my second Ludum Dare game! This time I limited my scope and am happy with the result! I look forward to hearing your feedback.
 
 Huge shout-out to **Sweet_Niche** who let me use his awesome looping sound track!
+
+https://soundcloud.com/sweet-niche/spaghetti-part-2-demo-1
