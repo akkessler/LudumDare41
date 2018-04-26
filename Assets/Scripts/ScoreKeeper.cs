@@ -53,7 +53,7 @@ public class ScoreKeeper : MonoBehaviour {
 
     public void UpdateMaxStreakText()
     {
-        maxStreakText.text = string.Format("Best Streak: {0}", maxStreak);
+        maxStreakText.text = string.Format("{0}", maxStreak);
     }
     
 }

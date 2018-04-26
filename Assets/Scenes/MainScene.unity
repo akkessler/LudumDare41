@@ -306,7 +306,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1680211054
+  randomSeed: -519326714
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3759,7 +3759,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3932,8 +3932,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414143165}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 25, y: -2.8600001, z: 0}
+  m_LocalRotation: {x: 0.22006032, y: 0.59077996, z: 0.17173906, w: -0.75700605}
+  m_LocalPosition: {x: 96.87109, y: -44.82443, z: -25.005865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4005,8 +4005,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436782080}
-  m_LocalRotation: {x: 0.33826807, y: 0.6185633, z: 0.33463457, w: -0.62527907}
-  m_LocalPosition: {x: -10.415577, y: -358.02057, z: -24.611195}
+  m_LocalRotation: {x: 0.22006038, y: 0.5907799, z: 0.1717391, w: -0.75700605}
+  m_LocalPosition: {x: 86.396805, y: -42.172405, z: -24.941189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4375,7 +4375,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: '###'
 --- !u!222 &808847082
@@ -4444,7 +4444,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4412397263398128, guid: 7e5b049910777944297e5271ae90247d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4412397263398128, guid: 7e5b049910777944297e5271ae90247d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4944,7 +4944,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Click to Shoot
 
@@ -5378,10 +5378,10 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30, y: -30}
-  m_SizeDelta: {x: 300, y: 200}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: -568, y: 200}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1727237033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,13 +5408,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Best Streak: ###'
+  m_Text: '###'
 --- !u!222 &1727237034
 CanvasRenderer:
   m_ObjectHideFlags: 0
